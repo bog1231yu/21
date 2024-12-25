@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <script>
+        // 1. Print numbers from 1 to 15; if greater than 5, print "greater than 5"
+        for (let i = 1; i <= 15; i++) {
+            console.log(i);
+            if (i > 5) console.log("greater than 5");
+        }
+
+        // 2. Output only even numbers from the array
+        const nums = [3, 6, 9, 12, 15];
+        nums.forEach(num => { if (num % 2 === 0) console.log("Even number:", num); });
+
+        // 3. Print each letter of the string and if the letter is 'a', print additional text
+        const text1 = "banana";
+        for (let letter of text1) {
+            console.log(letter);
+            if (letter === 'a') console.log("Found an 'a'!");
+        }
+
+        // 4. Output only long words (more than 5 letters) from the array
+        const colors = ["red", "green", "blue", "yellow"];
+        colors.forEach(word => { if (word.length > 5) console.log("Long word:", word); });
+
+        // 5. Output numbers from 1 to 50 that are divisible by 7 and print "Divisible by 7"
+        for (let i = 1; i <= 50; i++) {
+            if (i % 7 === 0) console.log(i, "Divisible by 7");
+        }
+
+        // 6. Multiply each element of the array by 2 and print the result
+        const nums2 = [4, 8, 12, 16, 20];
+        nums2.forEach(num => console.log("Multiplied by 2:", num * 2));
+
+        // 7. Print each letter of 'javascript' and terminate on 'j'
+        const word = 'javascript';
+        for (let i = 0; i < word.length; i++) {
+            if (word[i] === 'j') {
+                console.log("Terminating at 'j'");
+                break;
+            }
+            console.log(word[i]);
+        }
+
+        // 8. From the array, print only those numbers divisible by 5
+        const nums3 = [5, 10, 15, 20, 25];
+        nums3.forEach(num => { if (num % 5 === 0) console.log("Divisible by 5:", num); });
+
+        // 9. Print each letter in 'hello world', omitting 'o'
+        const text2 = "hello world";
+        for (let letter of text2) {
+            if (letter === 'o') continue;
+            console.log(letter);
+        }
+
+        // 10. Calculating the sum of only even numbers
+        const nums4 = [1, 2, 3, 4, 5, 6];
+        const evenSum = nums4.reduce((sum, num) => num % 2 === 0 ? sum + num : sum, 0);
+        console.log("Sum of even numbers:", evenSum);
+
+        // 11. Printing the multiplication table of the number 10
+        const multiplier = 10;
+        for (let i = 1; i <= 10; i++) {
+            console.log(`${multiplier} x ${i} = ${multiplier * i}`);
+        }
+
+        // 12. Calculating each element; if >4, multiply by 3
+        const nums5 = [2, 7, 4, 9, 5];
+        nums5.forEach(num => {
+            const result = num > 4 ? num * 3 : num;
+            console.log(`Result for ${num}:`, result);
+        });
+
+        // 13. Print all numbers from 1 to 30; if >10, print additional text
+        for (let i = 1; i <= 30; i++) {
+            console.log(i);
+            if (i > 10) console.log("This number is greater than 10");
+        }
+
+        // 14. When finding 'e' in 'frontend', print "found e"
+        const word2 = "frontend";
+        for (let letter of word2) {
+            if (letter === 'e') console.log("Found e!");
+            console.log(letter);
+        }
+
+        // 15. Extract elements less than 250
+        const largeNums = [100, 200, 300, 400, 500];
+        const lessThan250 = largeNums.filter(num => num < 250);
+        console.log("Numbers less than 250:", lessThan250);
+
+    </script>
+</body>
+</html>
